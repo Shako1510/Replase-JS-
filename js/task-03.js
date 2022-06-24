@@ -21,12 +21,15 @@ console.log(galerry);
 
 
 
-const newColection = images.map(image => {
-  const newElemLi = document.createElement('li');
+const newColection = images.map((image) =>
+  //  const newElemLi = document.createElement('li');
+  `<img>${image}</img>`)
+  .join('');
 
 
 
-  return newElemLi;
-});
+
 
 console.log(newColection);
+
+// galerry.append(...newColection);
