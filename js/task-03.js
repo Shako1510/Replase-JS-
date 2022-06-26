@@ -21,15 +21,48 @@ console.log(galerry);
 
 
 
-const newColection = images.map((image) =>
-  //  const newElemLi = document.createElement('li');
-  `<img>${image}</img>`)
-  .join('');
+// Це простий варіант для створення на кожній ітерації тега img
+// const imgGallary = images.map(image => {
+//   const imgEll = document.createElement('img');
+//   const imgLiEll = document.createElement('li');
+
+//   imgEll.src = image.url;
+//   imgEll.alt = image.alt;
+//   imgEll.width = 520;
+//   imgEll.classList.add('item-foto');
 
 
 
 
 
-console.log(newColection);
+//   imgLiEll.append(imgEll);
 
-// galerry.append(...newColection);
+//   return imgLiEll;
+
+// });
+
+// galerry.append(...imgGallary);
+
+// console.log(imgGallary);
+
+
+
+
+
+
+// <!--Варіант шаблонна строка зі стилями-->
+
+const imgEll = images.map(({ url, alt }) => {
+
+  return `<li><img class = 'item-foto'  alt = '${alt}'; src='${url}' width = 320px;></li>`;
+}).join('');
+
+console.log(imgEll);
+
+
+galerry.insertAdjacentHTML("beforeend", `${imgEll}`);
+
+
+
+
+

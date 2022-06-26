@@ -22,3 +22,9 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.item-foto {
+  display: inline-flex;
+  border-radius: 50%;
+
+}
