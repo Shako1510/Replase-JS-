@@ -31,10 +31,6 @@ console.log(galerry);
 //   imgEll.width = 520;
 //   imgEll.classList.add('item-foto');
 
-
-
-
-
 //   imgLiEll.append(imgEll);
 
 //   return imgLiEll;
@@ -44,9 +40,6 @@ console.log(galerry);
 // galerry.append(...imgGallary);
 
 // console.log(imgGallary);
-
-
-
 
 
 
