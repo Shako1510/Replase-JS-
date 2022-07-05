@@ -12,10 +12,22 @@ function onFormSubmit(event) {
     const formListEll = event.currentTarget.elements;
     console.log(formListEll);
 
-    if (!formEll.elements.email.value) {
+    const formData = new FormData(event.currentTarget);
+    console.log(formData);
+
+    if (!formEll.elements.email.value || !formEll.elements.password.value) {
         alert('Заповни всі поля форми');
-    }
+    } else {
+        formData.forEach((value, name) => {
+            console.log('onFormSubmit -> name', name);
+            console.log('onFormSubmit -> value', value);
+        }
+        )
 
-
-
+    };
+    return formEll.reset();
 };
+
+
+
+
