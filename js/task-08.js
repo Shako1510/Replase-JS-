@@ -10,20 +10,18 @@ function onFormSubmit(event) {
     event.preventDefault();
 
     const formListEll = event.currentTarget.elements;
-    console.log(formListEll);
 
     const formData = new FormData(event.currentTarget);
-    console.log(formData);
 
-    if (!formEll.elements.email.value || !formEll.elements.password.value) {
+
+    if (formEll.elements.email.value === '' || formEll.elements.password.value === '') {
         alert('Заповни всі поля форми');
     } else {
         formData.forEach((value, name) => {
             console.log('onFormSubmit -> name', name);
             console.log('onFormSubmit -> value', value);
-        }
-        )
-
+        })
+        console.log(formData);
     };
     return formEll.reset();
 };
