@@ -1,22 +1,34 @@
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+
 
 const bodyEll = document.querySelector('body');
 const buttonEll = document.querySelector('button.change-color');
 const spanEll = document.querySelector('.color');
 
 
-
-
 buttonEll.addEventListener('click', changeColorBody);
 
-function changeColorBody() {
+function changeColorBody(event) {
 
   let color = getRandomHexColor();
 
-  bodyEll.style.background = color;
+  bodyEll.style.backgroundColor = color;
   spanEll.textContent = color;
 
-
 }
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+// Перетворення RGB у HEX
+
+// function rgb2hex(rgb) {
+//   var rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+
+//   return (rgb && rgb.length === 4) ? "#" +
+//     ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) +
+//     ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) +
+//     ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : '';
+// };
+
