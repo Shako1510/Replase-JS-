@@ -6,6 +6,3 @@ console.log(Math.round(result))
 
 let link = 'https://somesite.com/about';
 
-if () {
-
-}
