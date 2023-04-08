@@ -1,25 +1,37 @@
 // let result = (Math.random() * (3 - 0) + 0).toFixed(1);
 // let result1 = 1.2;
+let count = 0;
 
+function cc(card) {
+    // Змініть код лише під цим рядком
+    if (card == 2 || card == 3) {
+        return count + 1 + ' Bet';
+    }
 
-const stats = {
-    max: 56.78,
-    standard_deviation: 4.34,
-    median: 34.54,
-    mode: 23.87,
-    min: -0.75,
-    average: 35.85
-};
+    return "Change Me";
+    // Змініть код лише над цим рядком
+}
+
+console.log(cc());
+
+// const stats = {
+//     max: 56.78,
+//     standard_deviation: 4.34,
+//     median: 34.54,
+//     mode: 23.87,
+//     min: -0.75,
+//     average: 35.85
+// };
 
 // Only change code below this line
-const half = ({ stats }) => {
+// const half = ({ stats }) => {
 
-    const { max, min } = stats;
+//     const { max, min } = stats;
 
-    return max + min;
-};
-console.log(stats);
-console.log(half);
+//     return max + min;
+// };
+// console.log(stats);
+// console.log(half);
 // Only change code above this line
 
 
