@@ -1,18 +1,71 @@
 // let result = (Math.random() * (3 - 0) + 0).toFixed(1);
 // let result1 = 1.2;
-let count = 0;
 
-function cc(card) {
-    // Змініть код лише під цим рядком
-    if (card == 2 || card == 3) {
-        return count + 1 + ' Bet';
+
+const recordCollection = {
+    2548: {
+        albumTitle: 'Slippery When Wet',
+        artist: 'Bon Jovi',
+        tracks: ['Let It Rock', 'You Give Love a Bad Name'],
+        age: '',
+    },
+    2468: {
+        albumTitle: '1999',
+        artist: 'Prince',
+        tracks: ['1999', 'Little Red Corvette']
+    },
+    1245: {
+        artist: 'Robert Palmer',
+        tracks: []
+    },
+    5439: {
+        albumTitle: 'ABBA Gold'
+    }
+};
+
+// Змініть код лише під цим рядком
+function updateRecords(records, id, prop, value) {
+
+    // if (records[id][prop] === '') {
+    //     delete records[id][prop];
+    // }
+    // else if (prop !== 'tracks' && value !== '') {
+    //     records[id][prop] = value;
+    // }
+    if (!records[id].hasOwnProperty('tracks')) {
+        records[id].gggggg = [];
+    } else if (prop === 'tracks' && value !== '') {
+        records[id].tracks.push(value);
     }
 
-    return "Change Me";
-    // Змініть код лише над цим рядком
+
+    // if (!records[id].hasOwnProperty('tracks')) {
+    //     records[id].tracks = [];
+    // }
+
+    // else if (prop === 'tracks' && value !== '') {
+    //     records[id]['tracks'] = value;
+    // }
+
+    // if (records[id][prop] === '') {
+    //     delete records[id][prop];
+    // }
+
+
+    //
+
+    // додає властивість  records[id]['age'] = 'gjhjhj';
+
+    return records;
+
+
 }
 
-console.log(cc());
+
+
+console.log(updateRecords(recordCollection, 5439, 'trasks', "Take a Chance on Me"));
+
+
 
 // const stats = {
 //     max: 56.78,
