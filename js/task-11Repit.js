@@ -2,68 +2,72 @@
 // let result1 = 1.2;
 
 
-const recordCollection = {
-    2548: {
-        albumTitle: 'Slippery When Wet',
-        artist: 'Bon Jovi',
-        tracks: ['Let It Rock', 'You Give Love a Bad Name'],
-        age: '',
-    },
-    2468: {
-        albumTitle: '1999',
-        artist: 'Prince',
-        tracks: ['1999', 'Little Red Corvette']
-    },
-    1245: {
-        artist: 'Robert Palmer',
-        tracks: []
-    },
-    5439: {
-        albumTitle: 'ABBA Gold'
+
+function multiplyAll(arr) {
+    let product = 0;
+
+    // Змініть код лише під цим рядком
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            console.log(product = product + arr[i][j] + arr[i][j]);
+
+        }
+        // Змініть код лише над цим рядком
+        // return product;
     }
-};
-
-// Змініть код лише під цим рядком
-function updateRecords(records, id, prop, value) {
-
-    // if (records[id][prop] === '') {
-    //     delete records[id][prop];
-    // }
-    // else if (prop !== 'tracks' && value !== '') {
-    //     records[id][prop] = value;
-    // }
-    if (!records[id].hasOwnProperty('tracks')) {
-        records[id].gggggg = [];
-    } else if (prop === 'tracks' && value !== '') {
-        records[id].tracks.push(value);
-    }
-
-
-    // if (!records[id].hasOwnProperty('tracks')) {
-    //     records[id].tracks = [];
-    // }
-
-    // else if (prop === 'tracks' && value !== '') {
-    //     records[id]['tracks'] = value;
-    // }
-
-    // if (records[id][prop] === '') {
-    //     delete records[id][prop];
-    // }
-
-
-    //
-
-    // додає властивість  records[id]['age'] = 'gjhjhj';
-
-    return records;
-
-
 }
 
+console.log(multiplyAll([[1, 2], [3, 4], [5, 6]]));
 
 
-console.log(updateRecords(recordCollection, 5439, 'trasks', "Take a Chance on Me"));
+// const recordCollection = {
+//     2548: {
+//         albumTitle: 'Slippery When Wet',
+//         artist: 'Bon Jovi',
+//         tracks: ['Let It Rock', 'You Give Love a Bad Name'],
+//         age: '',
+//     },
+//     2468: {
+//         albumTitle: '1999',
+//         artist: 'Prince',
+//         tracks: ['1999', 'Little Red Corvette']
+//     },
+//     1245: {
+//         artist: 'Robert Palmer',
+//         tracks: []
+//     },
+//     5439: {
+//         albumTitle: 'ABBA Gold'
+//     }
+// };
+
+// // Змініть код лише під цим рядком
+// function updateRecords(records, id, prop, value) {
+
+//     // if (records[id][prop] === '') {
+//     //     delete records[id][prop];
+//     // }
+//     // else if (prop !== 'tracks' && value !== '') {
+//     //     records[id][prop] = value;
+//     // }
+//     if (!records[id].hasOwnProperty('tracks')) {
+//         records[id] = [];
+//     } else if (prop === 'tracks' && value !== '') {
+//         records[id].tracks.push(value);
+//     }
+
+
+
+//     // додає властивість  records[id]['age'] = 'gjhjhj';
+
+//     return records;
+
+
+// }
+
+
+
+// console.log(updateRecords(recordCollection, 5439, 'trasks', "Take a Chance on Me"));
 
 
 
